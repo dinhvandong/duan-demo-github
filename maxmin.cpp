@@ -1,5 +1,5 @@
 #include <iostream>
-#include <algorithm>
+#include <limits>
 
 using namespace std;
 
@@ -14,10 +14,10 @@ int main() {
         return 0;
     }
 
-    long long x;
-    cin >> x;
-    long long mn = x, mx = x;
-    for (int i = 1; i < n; ++i) {
+    long long mn = numeric_limits<long long>::max();
+    long long mx = numeric_limits<long long>::min();
+    for (int i = 0; i < n; ++i) {
+        long long x;
         cin >> x;
         if (x < mn) mn = x;
         if (x > mx) mx = x;
